@@ -1,0 +1,262 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["Hi", "Hello", "Hey", "Good morning", "Good afternoon"],
+      "responses": ["Hello! How can I assist you?", "Hi there! How can I help you today?"],
+      "context": [""]
+    },
+    {
+      "tag": "general_info",
+      "patterns": ["What programs do you offer?", "Can you tell me about your majors?", "What degrees do you have?"],
+      "responses": ["We offer a variety of undergraduate programs. Would you like more information about a specific program?"],
+      "context": [""]
+    },
+    {
+      "tag":"address",
+      "patterns":["what is the location of the college","what is the address of the college","where is college","where is KITSW","where is Kakatiya Institute of Technology and Science"],
+      "responses":["The college is located at Opposite Yerragattu Hillock, Hasanparthy Warangal, Telangana 506015 , India"],
+      "context":[""]
+    },
+    {
+      "tag":"grade",
+      "patterns":["what is the rank of the college","which is the best college","what is the grade of the college"],
+      "responses":["KITSW is with NAAC A grade Accredited Instuite with a CGPA of 3.21, AICTE-CII Survey of Industry Linked Technical Institutions KITSW ranked as GOLDEN CATEGORY Institution for 2015, 2016, 2017, 2018, 2019, 2020."],
+      "context":[""]
+    },
+    {
+      "tag":"college_name",
+      "patterns":["what is the name of the college"],
+      "responses":["Kakatiya Institute of Technology and Science Warangal simply Called as KITSW"],
+      "context":[""]
+    },
+    {
+      "tag": "admissions",
+      "patterns": ["How do I apply for admissions?", "What are the admission requirements?", "When is the application deadline for admission?"],
+      "responses": ["In two ways you get admission in the college. One is through the TS Eamcet Counselling and another way taking admission through the Management Quota, Fee varies for both admission process"],
+      "context": ["fee"]
+    },
+    {
+      "tag": "fee",
+      "patterns": ["How much is the college fee?", "What is the total cost of tuition fee for a year at the college?", "What's the annual cost of tuition fees?","what is the college fee"],
+      "responses": ["College fee for the students who take admission through the TS Eamcet Councelling and Management Quota for first year is 1,25,000 + 16,000(for the Library and accreditation fee), for second, third, fourth years 1,25,000 + 7000(for the Library and accreditation fee). adittionally the Management Quota Students need to pay donation fee(visit college for the information)"],
+      "context": ["scholarship"]
+    },
+    {
+      "tag": "scholarship",
+      "patterns": ["What types of scholarships are available at your college?", "Can scholarships be renewed annually or are they one-time awards?"],
+      "responses": ["The students who take admission through the TS eamcet councelling will get 35,000 scholarship(depends on the income certificate and caste, vist the tsepass website for more information), this Scholarship need to renewed every year.The Management Quota Students doesn't get the Scholarship"],
+      "context": [""]
+    },
+    {
+      "tag": "campus_life",
+      "patterns": ["What is campus life like?", "Are there student clubs and organizations?", "Tell me about housing options."],
+      "responses": ["Campus life is vibrant and diverse, with numerous clubs and organizations"],
+      "context": [""]
+    },
+    {
+      "tag": "clubs",
+      "patterns": ["what are the clubs available in the college","what is clubs","is there clubs in the collge"],
+      "responses": ["clubs refer to organized groups of students who come together based on shared interests, hobbies, academic pursuits, or social causes. There are Nine Clubs in the college they are Music, Dance and Fine Arts, Games & Sports Club, Literary Club, Photography & Media Club, Humanity Club, Disciplinary Club, NCC, NSS, Technical Club"],
+      "context": [""]
+    },
+    {
+      "tag": "contact_info",
+      "patterns": ["How can I contact the university?", "What is the phone number and address?"],
+      "responses": ["You can contact us by phone at 073825 64888 or visit us at opp. to Yerragattugutta, Hasanparthy, Hanamkonda, Koukonda, Telangana 506015. For more contact information, please visit our website(https://www.kitsw.ac.in/)."],
+      "context": [""]
+    },
+    {
+      "tag": "canteen",
+      "patterns": ["where is canteen located", "can i have lunch in canteen", "how can i approach canteen", "is there canteen in college"],
+      "responses": ["There are two canteens in the college one is located near block 7 and another one located near Block 4, you can have lunch, snacks and juices in canteen."],
+      "context": [""]
+    },
+    {
+      "tag": "dishes",
+      "patterns": ["What are the dishes available in the canteen?","Are prices high in the canteen?","what is the menu?"],
+      "responses": ["We have a wide variety of dishes in the canteen, we have idli,vada dosa,utapam,bonda,puri in the breakfast.we have chickn biryani,veg biryani,fried rice in lunch.In starters we have manchuria,noodles,fish fry.In snacks we have samosa ,fries,frankies,puffs and we have milkshakes,fruit juices, cold drinks,tea ,cofee in the canteen.Here prices are very reasonable."],
+      "context": [""]
+    },
+    {
+      "tag": "internships",
+      "patterns": ["Can you provide information about internships for engineering students?", "Is internship necessary for students "],
+      "responses": ["Internships for engineering students are available through our career services office, which helps students find internships with industry partners."],
+      "context": [""]
+    },
+    {
+      "tag": "attendance",
+      "patterns": ["How does attendance impact academic performance in college? ", "What are the consequences of poor attendance in college courses?", "How do professors typically track attendance in college courses?", "Is attendance mandatory for all college classes in the college"],
+      "responses": ["Attendance in our college is taken by lecturers for every class, it is must that everyone should maintain 75%(relaxation of 10% available for the Medical related problems) of the attendance for each semester.Incase of not mainting the attendance strict actions will be taken and they may get detain and not allowed for the next semester"],
+      "context": [""]
+    },
+    {
+      "tag": "college_bus",
+      "patterns": ["What is the availability of college bus services at the college", "how much is the bus fees/charges/costs?", "How does the college bus system accommodate fluctuations in student demand during exam periods or holidays?"],
+      "responses": ["Bus facility is provided by the college and the fees for the facilty is twenty thousand per year. During the exam periods college will provide the bus facility according to the timings and busses will move in almost all the directions of the city."],
+      "context": [""]
+    },
+    {
+      "tag": "ragging",
+      "patterns": ["Is ragging allowed in the college", "what consequences students should face if ragging is been done", "what are the antiragging rules/policies in our college?"],
+      "responses": ["Ragging is strictly prohibited in our college , All the senior students are instructed not to indulge in ragging and any kind of indisciplinary activities. As per the ragging act if any student is involving in ragging He/she will immediately suspended from the college for 4-weeks, pending enquiry and liable to dimissal.Under the act accused will get 2 year to 7 year jail and cannot pursue the course thereafter." ],
+      "context": [""]
+    },
+    {
+      "tag": "games",
+      "patterns": ["Do we have a play ground in our college?", "what games will be played in the college?", "Are there any tournaments in the college?","Is playing games necessary for students?","What rewards students will get by playing games in the college?"],
+      "responses": ["We have a playground in our college. We have both outdoor and indoor games. Outdoor games includes Cricket, Football, Basketball, Handball, Kabaddi, Kho-Kho, Volleyball and Badminton. Indoor games include Chess, Carroms and Table Tennis. Tournaments will be held with other colleges, winners are given rewards. Playing games are necessary for physical and mental benefits of the students"],
+      "context": [""]
+    },
+    {
+      "tag": "college_timings",
+      "patterns": ["What are the college timings?"],
+      "responses": ["The college timings are from 9:10 A.M to 4:00 P.M from Monday to Friday with lunch break from 12:30 P.M to 1:30 P.M, 9:10 A.M to 12:30 P.M on Saturday and Sunday will be the Holiday"],
+      "context": [""]
+    },
+    {
+      "tag": "college_gym",
+      "patterns": ["Is there a gym in the college?"," Is gym provided in the college?"," What are the equipments in the gym?"],
+      "responses": ["We have a gym in the college. Separate gyms are provided for girls and boys. Treadmill and dumbells are available."],
+      "context": [""]
+    },
+    {
+      "tag": "college_library",
+      "patterns": ["Is there a library in the college?","What are the timings of the library?","Can we borrow books from the library?"],
+      "responses": [" We have library in the college. The library is opened from 8:00 A.M. to 8:00 P.M(Monday - Friday), 8:00 A.M to 12:30 P.M on Saturday. We can borrow books for a period of 20 days. Fine is collected after 20 days, costing 1 rupee per day. Free books will be issued for the students who belongs to minor caste."],
+      "context": [""]
+    },
+    {
+      "tag": "parking_facilities",
+      "patterns": ["Is parking allowed inside the college?","Are vehciles allowed inside the college?"],
+      "responses": ["Parking is there inside the college at the gate for two wheelers and four wheelers but vehicles are not allowed inside the college they are allowed only for parking.Lecturers can use their vehicles inside the college."],
+      "context": [""]
+    },
+    {
+      "tag": "college_events/fests",
+      "patterns": ["What are the events held in the college?","Do we have cultural fest in the college?","Do we have holidays in the college at the time of fests?"],
+      "responses": ["We have both technical fest and cultural fest in the college.For every odd semester we have SUMSHODINI technical fest in which we have technical quizes held by seniors to juniors and workshops are conducted.For every even semester we have SANSKRITI cultural fest in which we enjoy through dances in DJ and food in food stalls. We also have MUN which is also an events in the college.During fest holidays will be given. "],
+      "context": [""]
+    },
+    {
+      "tag": "hostel",
+      "patterns": ["Do we have hostel in the college?","What is the fees for hostel?","How is food and accomodation in the hostel?","Do we have outside hostels near colleg?"],
+      "responses": ["we have hostels in the college for boys an girls we have delicious food and nice accomodation.Fees is 60,000 for every year.we also have so many outside hostels near college."],
+      "context": [""]
+    },
+    {
+      "tag": "councellor",
+      "patterns": ["who is councellor?","Do we have a personaal guide for every student?"],
+      "responses": ["we have a personal guide for every student and every week we meet them and they know about our attendance and studies.Councellor is a personal guide for every student."],
+      "context": [""]
+    },
+    {
+      "tag": "malpractice",
+      "patterns": ["what is malpractice?","What is the punishment for malpractice?","Is detaining done if we do malpractice?"],
+      "responses": ["If any student copy in the exam or indulge in any wrong activities they may get detained from the college"],
+      "context": [""]
+    },
+    {
+      "tag": "sem_result",
+      "patterns": ["When is the semester result announced?","When is the sem result announced?"],
+      "responses": ["After completion of the exams within one or two months we will get the result of the exams."],
+      "context": [""]
+    },
+    {
+      "tag": "subjects",
+      "patterns": ["what are the subjects for students in btech?"],
+      "responses": ["we have so many subjects in engineering but in first year any branch student will have common subjects like maths, physics, chemistry, basic electric engineering, Engineering mechanics, english, drawing, c and data structures. From second year according to their branches students will have their respective subjects."],
+      "context": [""]
+    },
+    {
+      "tag": "innovation",
+      "patterns": ["do we have a innovation centre?","what is innovation"],
+      "responses": ["we have a innovation , invention and incubation centre in our college.If students have any new ideas in any new inventions they can say there and they can develop projects."],
+      "context": [""]
+    },
+    {
+      "tag": "industrial_visits",
+      "patterns": ["Do we have industrial visits in our college?"],
+      "responses": ["we have some industrial visits by our college for the students.It depends upon the faculty and the subject."],
+      "context": [""]
+    },
+    {
+      "tag": "association_hour",
+      "patterns": ["Do juniors have interaction with seniors?","what is association hour?"],
+      "responses": ["we have an association hour where second years will be interacted with third years and fourth years.sniors will help juniors with their doubts in their academics and job related questions.we give them oppurtunity to talk and improve thier speaking skills. we also have fun with technical and fun rounds and sessions from people who come from companies."],
+      "context": [""]
+    },
+    {
+      "tag": "dress_code",
+      "patterns": ["Do we have any dress code for college students?","is there uniform for the college"],
+      "responses": ["we have dress code for students boys should only wear jeans and shirts ,T-shirts are not allowed.Girls should wear leggins and kurtis ,jeans and sleeveless is not alowed."],
+      "context": [""]
+    },
+    {
+      "tag": "induction_orientation",
+      "patterns": ["what is induction and orientation?"],
+      "responses": ["we have induction program on the first day of the college with parents and then for one week we have orientation in which we have introduction of every subject."],
+      "context": [""]
+    },
+    {
+      "tag": "blocks",
+      "patterns": ["how many blocks we have?","do we have labs in the college?","Do we have auditoriuum and seminar halls","how many blocks in the college"],
+      "responses": ["we have 7 blocks ,one auditorium and seminar halls and labs in the college.labs are provided with Ac's and neat atmosphere."],
+      "context": [""]
+    },
+    {
+      "tag": "exams_patterns",
+      "patterns": ["what is examination pattern?","what is the exam pattern of the college"],
+      "responses": ["Each year we have 2 Semisters and in each semister we have 2 minors, 2 mids and 1 sem exam and also we have lab externals."],
+      "context": [""]
+    },
+    {
+      "tag": "faculty",
+      "patterns": ["how are faculty in the college?"],
+      "responses": ["We have a very good faculty in our college we have a principal as a head,then we have HOD's for every branches and sub faculty's in every braches.Teaching is very impressive and knowledge gaining in the college. "],
+      "context": [""]
+    },
+    {
+      "tag": "Trainaing and Placement(TNP)",
+      "patterns": ["is training and placement required?","How much it costs for training and placement?"],
+      "responses": ["It is compulsary to pay for training and placement , they give training for jobs and then placements are done.Fees is ten thousand."],
+      "context": [""]
+    },
+    {
+      "tag": "Branches",
+      "patterns": ["How many different branches we are having in the college?","what are the branches offered by the college"],
+      "responses": ["we have so many branches we have CSE, IT, CSM, CSN, CSO, CSD, ME, CIVIL, ECE, EEE, ECI E&I.we have Mtech and mba also in our college."],
+      "context": [""]
+    },
+    {
+      "tag": "best",
+      "patterns": ["which is the best branch?"],
+      "responses": ["It depends on your interest if your interestd in computers ,computer side is best branch ,but if your are intrested in electrical and civil then those are best."],
+      "context": [""]
+    },
+    {
+      "tag": "package_placements",
+      "patterns": ["how many placements we got last year?","what is the highest package?"],
+      "responses": ["we have 304 placements in 2024 and still counting.Highest package in 2023 is 32 LPA and in 2024 till now it is 12 LPA."],
+      "context": [""]
+    },
+    {
+      "tag": "store",
+      "patterns": ["Do we have store/stationary in the college?"],
+      "responses": ["we have a store in the college they sell all stationary material including xerox."],
+      "context": [""]
+    },
+    {
+      "tag": "bank",
+      "patterns": ["Do we have bank in the college?"],
+      "responses": ["we have bank in the college ,we can pay fees for hostel , college fees and hostel fees in the bank.Both cash and cheque is taken."],
+      "context": [""]
+    },
+    {
+      "tag": "bye",
+      "patterns": ["bye","thank you","thanku","thankyou","Good bye", "See you later", "Bye for now", "Take care"],
+      "responses": ["Goodbye! Feel free to reach out if you have any further questions."],
+      "context": [""]
+    }
+  ]
+}
