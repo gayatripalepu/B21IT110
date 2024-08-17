@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatbot</title>
+  <style>
+    /* CSS styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fffff7;
+      margin: 0;
+      padding: 0;
+    }
+
+    .chat-container {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fcfcf6;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .chat-box {
+      height: 450px;
+      overflow-y: scroll;
+      padding: 10px;
+      border: 1px solid #e7e3e6;
+      border-radius: 5px;
+    }
+
+    .chat-message {
+      margin-bottom: 15px;
+      overflow: auto;
+      color : green;
+      font-size: medium;
+    }
+
+    .user-message p {
+      background-color: #f0f0f0;
+      color: #ec4242;
+      border-radius: 5px;
+      padding: 8px 12px;
+      display: inline-block;
+      max-width: 70%;
+      float: right;
+    }
+
+    .bot-message p {
+      background-color: #f0f0f0;
+      border-radius: 5px;
+      padding: 8px 12px;
+      display: inline-block;
+      max-width: 70%;
+    }
+
+    /* Added margin to emoji */
+    .emoji {
+      margin-right: 5px;
+    }
+
+    /* Input form styles */
+    #chat-form {
+      margin-top: 20px;
+    }
+
+    #user-input {
+      color: #ec4242;
+      width: 83%;
+      padding: 10px;
+      border: 1px solid #11cf7a;
+      border-radius: 5px;
+      margin-right: 10px;
+      font-size: 17px;
+      min-height: max-content;
+      height: 25px;
+    }
+
+    #user-input:focus {
+      outline: none;
+    }
+
+    #chat-form button {
+      padding: 10px 30px;
+      background-color: #3463cf;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      height: 45px;
+      width: 115px;
+    }
+    h1{
+      text-align: center;
+      margin-bottom: 0;
+    }
+
+    #chat-form button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>KITSW Chatbot</h1>
+  <div class="chat-container">
+    <div class="chat-box" id="chat-box">
+      <div class="chat-message">
+        <div class="bot-message">
+          <p><span class="emoji">🤖</span> Hello! How can I help you today?</p>
+        </div>
+      </div>
+    </div>
+    <form id="chat-form">
+      <input type="text" id="user-input" placeholder="Type a message...">
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <script>
+    // JavaScript code
+    document.getElementById('chat-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      var userInput = document.getElementById('user-input').value;
+      sendMessage(userInput);
+      document.getElementById('user-input').value = '';
+    });
+
+    function sendMessage(message) {
+      var chatBox = document.getElementById('chat-box');
+      var userMessage = document.createElement('div');
+      userMessage.className = 'chat-message';
+      var userBubble = document.createElement('div');
+      userBubble.className = 'user-message';
+      var userPara = document.createElement('p');
+      userPara.innerHTML = '<span class="emoji">🙍</span> ' + message; // Add human emoji to user message
+      userBubble.appendChild(userPara);
+      userMessage.appendChild(userBubble);
+      chatBox.appendChild(userMessage);
+
+      // Send message to Flask app using fetch API
+      fetch('/get-response', {
+          method: 'POST',
+          body: JSON.stringify({
+            message: message
+          }),
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        })
+        .then(response => response.json())
+        .then(data => {
+          // Update chat box with bot response from data.response
+          var botMessage = document.createElement('div');
+          botMessage.className = 'chat-message';
+          var botBubble = document.createElement('div');
+          botBubble.className = 'bot-message';
+          var botPara = document.createElement('p');
+          botPara.innerHTML = '<span class="emoji">🤖</span> ' + data.response; // Add bot emoji to bot response
+          botBubble.appendChild(botPara);
+          botMessage.appendChild(botBubble);
+          chatBox.appendChild(botMessage);
+          chatBox.scrollTop = chatBox.scrollHeight;
+        })
+        .catch(error => console.error(error));
+    }
+  </script>
+</body>
+</html>
